@@ -3,21 +3,28 @@
 
 #include <iostream>
 #ifndef LIB_PRISON_H_
+using std::cout;
+using std::endl;
 #define LIB_PRISON_H_
 
 class Prison {
  private:
   static const int cells = 40;
-  int prisoners;
-  int bedsPerCell;
+  int numOfBedsPerCell;
   int cellCapacity;
+  int prisoners;
+  int numOfBeds;
+
  public:
-  void prison();
-  void setNumOfBeds(int numOfBeds);
-  int getNumOfBeds();
-  void setNumOfPrisoners(int NumOfPrisoners);
-  int getNumOfPrisoners();
-  void setCellCap();
+  Prison();
+  int getCells();
+  void setNumOfBedsPerCell(int numOfBedsPerCellInput);
+  int getNumOfBedsPerCell();
+  void setCellCap(int cellCapacityInput);
   int getCellCap();
+  void setNumOfBeds();
+  int getNumOfBeds();
+  void setNumOfPrisoners(int NumOfPrisonersInput);
+  int getNumOfPrisoners();
 };
 #endif  // LIB_PRISON_H_
